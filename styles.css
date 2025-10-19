@@ -271,6 +271,27 @@ h1 {
     }
 }
 
+.experience-text {
+    color: var(--base-800);
+    padding-top: 10px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+    position: relative;
+}
+
+.experience-text br {
+    margin-bottom: 12px;
+    display: block;
+    content: "";
+}
+
+
+strong {
+    color: var(--lilac-800);
+    font-weight: 600;
+}
+
 .logos {
     background-color: var(--base-100);
     border-radius: 30px;
@@ -395,10 +416,15 @@ h3 {
             padding: 30px;
             border-radius: 30px;
             flex: 1;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
 
             h3 {
-                margin-top: 20px;
-                margin-bottom: 10px;
+                font-size: 1.8rem;
+                color: var(--lilac-800);
+                font-weight: 600;
+                margin-bottom: 8px;
+                margin-top: 10px;
             }
 
             div {
@@ -453,6 +479,12 @@ h3 {
                 }
             }
         }
+
+        article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
     }
 
 }
@@ -461,79 +493,74 @@ h3 {
     .bento-grid {
         display: grid;
         grid-gap: 30px;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        height: 470px;
-        padding: 10px 150px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: masonry;
+        padding: 20px 150px;
         margin-bottom: 30px;
+
+        @media (max-width:1024px) {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 20px 80px;
+        }
 
         @media (max-width:768px) {
             display: flex;
             flex-direction: column;
             gap: 30px;
-            height: auto;
-            padding: 10px 50px;
-        }
-
-        @media (max-width:1024px) {
-            grid-template-rows: repeat(8, 1fr);
+            padding: 10px 40px;
         }
 
         .bento-item {
             padding: 30px;
             background-color: var(--lilac-100);
-            border-radius: 15px;
+            border-radius: 20px;
             position: relative;
             overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
             p {
                 margin-bottom: 10px;
                 font-weight: 200;
-                font-size: 20px;
-            } 
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                object-fit: cover;
-                transition: ease 3s all;
+                font-size: 18px;
+                line-height: 1.4;
             }
+
+            &:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+            }
+
+            /* Bento layout variations */
             &:nth-child(1) {
-                overflow-y: auto; 
-                scroll-behavior: smooth;
-                
-                &::-webkit-scrollbar {
-                    width: 8px;
-                }
-                
-                &::-webkit-scrollbar-track {
-                    border-radius: 8px;
-                    background-color: #e7e7e7;
-                    border: 1px solid #cacaca;
-                    box-shadow: inset 0 0 6px rgba(161, 127, 166, 0.3);
-                }
-                
-                &::-webkit-scrollbar-thumb {
-                    border-radius: 8px;
-                    background-color: #979797;
-                }
-                grid-column: span 2;
-                grid-row: span 3;
+                grid-column: span 1;
+                grid-row: span 5;
+                min-height: 250px;
+                background: linear-gradient(135deg, var(--lilac-100), var(--lilac-400));
+                color: var(--base-800);
             }
 
             &:nth-child(2) {
-                overflow-y: auto; 
-                overflow: hidden;
-                grid-column: span 3;
-                grid-row: span 1;
+                grid-column: span 2;
+                grid-row: span 2;
+                min-height: 250px;
+                background: var(--yellow);
             }
 
             &:nth-child(3) {
-                overflow-y: auto; 
-                overflow: hidden;
-                grid-column: span 3;
+                grid-column: span 1;
                 grid-row: span 2;
+                min-height: 400px;
+                background: var(--lilac-100);
+            }
+
+            &:nth-child(4) {
+                grid-column: span 3;
+                grid-row: span 3;
+                min-height: 250px;
+                background: var(--yellow-100);
             }
         }
     }
