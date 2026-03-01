@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <!-- Stronger contrasting gradient -->
+    <linearGradient id="lilyGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4A2C5A" stop-opacity="0.75"></stop>
+      <stop offset="0.4" stop-color="#6E5A7F" stop-opacity="0.70"></stop>
+      <stop offset="0.7" stop-color="#9A86B3" stop-opacity="0.65"></stop>
+      <stop offset="1" stop-color="#4A2C5A" stop-opacity="0.75"></stop>
+    </linearGradient>
+
+    <!-- subtle shimmer -->
+    <linearGradient id="highlight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"></stop>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.25"></stop>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"></stop>
+    </linearGradient>
+
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.2"></feGaussianBlur>
+    </filter>
+
+    <!-- Lily shape -->
+    <g id="lily" fill="none" stroke="url(#lilyGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M40 72 C32 52, 28 34, 40 20 C52 34, 48 52, 40 72 Z"></path>
+      <path d="M40 72 C24 56, 14 40, 22 26 C38 30, 38 52, 40 72 Z"></path>
+      <path d="M40 72 C56 56, 66 40, 58 26 C42 30, 42 52, 40 72 Z"></path>
+
+      <path d="M40 74 C40 112, 38 132, 28 162"></path>
+      <path d="M40 98 C56 116, 66 126, 78 134"></path>
+      <path d="M34 112 C22 122, 14 132, 10 146"></path>
+    </g>
+  </defs>
+
+  <!-- Large visible lilies -->
+  <g opacity="0.85" filter="url(#softGlow)">
+    <use href="#lily" x="120" y="120" transform="scale(1.3) rotate(-8 160 200)"></use>
+    <use href="#lily" x="500" y="100" transform="scale(1.1) rotate(10 540 180)"></use>
+    <use href="#lily" x="900" y="160" transform="scale(1.4) rotate(-6 940 240)"></use>
+    <use href="#lily" x="1300" y="120" transform="scale(1.2) rotate(12 1340 200)"></use>
+
+    <use href="#lily" x="220" y="520" transform="scale(1.4) rotate(8 260 600)"></use>
+    <use href="#lily" x="800" y="540" transform="scale(1.2) rotate(-10 840 620)"></use>
+    <use href="#lily" x="1200" y="500" transform="scale(1.3) rotate(6 1240 580)"></use>
+  </g>
+
+  <!-- subtle sheen band -->
+  <rect x="-300" y="0" width="2000" height="900" fill="url(#highlight)" opacity="0.15"></rect>
+</svg>
