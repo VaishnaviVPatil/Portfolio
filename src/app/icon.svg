@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Chunky black cat favicon. Honey eyes, rose nose + inner ears. -->
+  <path d="M12 22 L20 4 L26 22 Z" fill="#0d0912"/>
+  <path d="M52 22 L44 4 L38 22 Z" fill="#0d0912"/>
+  <path d="M17 20 L20 11 L23 20 Z" fill="#f0b6cf"/>
+  <path d="M47 20 L44 11 L41 20 Z" fill="#f0b6cf"/>
+  <ellipse cx="32" cy="38" rx="21" ry="19" fill="#0d0912"/>
+  <ellipse cx="24" cy="35" rx="2.6" ry="4.5" fill="#e8b04b"/>
+  <ellipse cx="40" cy="35" rx="2.6" ry="4.5" fill="#e8b04b"/>
+  <path d="M29.5 43 L34.5 43 L32 46.5 Z" fill="#f5b7b1"/>
+  <path d="M32 46.5 Q29 48.5 27 47" stroke="#f0b6cf" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M32 46.5 Q35 48.5 37 47" stroke="#f0b6cf" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+</svg>
