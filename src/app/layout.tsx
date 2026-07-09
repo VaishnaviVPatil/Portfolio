@@ -22,7 +22,7 @@ const instrument = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vaishnavivpatil.github.io"),
+  metadataBase: new URL("https://portfolio-navi.vercel.app"),
   title: {
     default: `${site.name} — ${site.role}`,
     template: `%s · ${site.name}`,
